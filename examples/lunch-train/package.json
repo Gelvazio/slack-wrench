@@ -1,0 +1,27 @@
+{
+  "name": "lunch-train",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Example app using slack-wrench tools",
+  "scripts": {
+    "start": "concurrently \"npm:start:*\"",
+    "start:server": "nodemon src/index.ts",
+    "start:ngrok": "ts-node scripts/ngrok.ts",
+    "test": "jest"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "@slack/bolt": "^1.4.1",
+    "@slack-wrench/bolt-interactions": "1.0.0",
+    "@slack-wrench/blocks": "1.0.0"
+  },
+  "devDependencies": {
+    "@slack/web-api": "^5.6.0",
+    "concurrently": "^5.0.1",
+    "ngrok": "^3.2.5",
+    "nodemon": "^2.0.1",
+    "ts-node": "^8.5.4",
+    "wait-for-localhost": "^3.2.0",
+    "wait-port": "^0.2.7"
+  }
+}
